@@ -175,7 +175,7 @@ while play == 'y':
             except: 
                 print("Please enter valid row and col numbers from 1 to 3:")
                 position_input = input().split()
-                position = []
+                position = []   
         """check if the input will be out of bounds"""
         while check_out_of_bounds(position[0],position[1]):
             print("Please enter valid row and col numbers from 1 to 3:")
@@ -187,7 +187,7 @@ while play == 'y':
                 except: 
                     print("Please enter valid row and col numbers from 1 to 3:")
                     position_input = input().split()
-                    position = []
+                    position = [] 
         """check if the spot is full and validate new input"""
         while not check_full(position[0] - 1,position[1] - 1):
             print(f"That spot is full!\n\nEnter row and column for player {value}")
@@ -199,7 +199,7 @@ while play == 'y':
                 except: 
                     print("Please enter valid row and col numbers from 1 to 3:")
                     position_input = input().split()
-                    position = []
+                    position = []        
         place_input(position[0] - 1, position[1] - 1)
         print(board_string(board))
         """check for a win or tie"""
