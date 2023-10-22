@@ -181,7 +181,7 @@ while play == 'y':
             print(f"That spot is full!\n\nEnter row and column for player {value}")
             position_input = input().split()
             position = []
-            for i in position_input:
+            for item in position_input:
                 try:
                     position.append(int(item))
                 except: 
