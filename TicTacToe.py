@@ -1,4 +1,16 @@
+"""
+Author:         Landon Thomas
+Date:           10/24/23
+Assignment:     Project 01 TicTacToe
+Course:         CPSC1050
+Course Section:    020
 
+CODE DESCRIPTION:
+This code is implemented to play a two person tic-tac-toe game using two inputs: player X and player O.
+The program alternates between the 2 players and asks them to choose a place on the board to place an X or O.
+Then, the program will validate if their input is a correct integer input, out of bounds, and if the spot is already full.
+The program will then finally check for a win or Tie, then prompt the user if they would like to play again.
+"""
 """makes the array into a tictactoe board"""
 def board_string(board):
     new_string = ""
