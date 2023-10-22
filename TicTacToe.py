@@ -204,6 +204,7 @@ while play == 'y':
     play = input().lower()
     while play != 'y' and play != 'n':
         print('Please enter valid input: Y or N')
+        print("Do you want to play again? Y or N")
         play = input().lower()
     if play == 'n':
         break
