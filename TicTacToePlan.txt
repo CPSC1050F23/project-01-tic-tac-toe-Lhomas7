@@ -1,0 +1,107 @@
+Author: Landon Thomas
+Pseudocode partner: Bryson Newman
+Date: 10/4/23
+assignment: tic tac toe pseudocode
+course: CPSC 1050
+Code description: planning tic tac toe
+** Analyze the problem**
+Steps: 
+draw a 3 by 3 grid
+first player starts with an x and other is an o 
+Player 1 starts first by placing an x in the grid and then player 2 places an o and both players try
+to get 3 in a row until grid is full
+game ends when players either get 3 in a row or the grid is full.
+
+rules: can only fill in one block at a time, must take turns and can only fill in a space that hasn't
+been filled yet
+
+
+Game start:
+draw 3x3 grid
+ask player 1 to choose a spot in the grid
+
+gameplay:
+alternate between the 2 players and prompt to choose a spot in the grid
+how to make sure no spots overlap?
+how to make sure player only chooses one space?
+how to make sure player only chooses space in grid?
+
+draw on board:
+how to place a 3v3 grid?
+how to find and place player mark in grid?
+
+game end:
+recognize winner or draw?
+how to recognize 3 in a row?
+how to tell if grid is full?
+
+** Plan Solution **
+Game Start:
+initialize board
+print example board 
+print board
+
+Game play:
+get user input for spot on grid
+if player1 input not on grid:
+    print spot is not available
+else:
+    insert x into grid at location selected
+if player2 input not on grid:
+    print spot is not available
+else:
+    insert o into grid at location selected
+if player1 number of inputs > 1:
+    print can only place in one spot
+if player2 number of inputs > 1:
+    print can only place in one spot
+
+Game end:
+recognize 3 in a row or full grid
+if player1 3 in a row == true:
+    print player1 wins
+if player2 3 in a row == true:
+    print player1 wins
+
+for empty string not in grid:
+    print grid is full draw
+
+
+** Break it down further**
+Initialize_Board()
+    sets up grid automatically
+    returns grid
+
+player1_input()
+    takes input and returns an x in the location
+    validates input
+
+player2_input()
+    takes input and returns an o in the location on grid
+    validates input
+
+checking_for_wins()
+    if player1 has a 3 in a row:
+        return player 1 wins
+    if player2 has 3 in a row:
+        return player 2 wins 
+full_board()
+    if number of open spaces == 0:
+    return full board
+    
+play_again()
+    ask user for input to play again or not
+
+#gamestart
+print(would you like to play?)
+Initialize_Board
+print(example_board)
+
+#gameplay
+while player1_input and player2_input:
+    checking_for_wins
+    fullboard()
+
+#endgame
+#execute checking_for_wins or full_board()
+print(would you like to play again?)
