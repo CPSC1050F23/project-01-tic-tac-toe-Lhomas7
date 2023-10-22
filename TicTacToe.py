@@ -161,7 +161,7 @@ while play == 'y':
             try: 
                 position.append(int(item))
             except: 
-                print("Please enter valid row and col numbers from 1 to 3")
+                print("Please enter valid row and col numbers from 1 to 3:")
                 position_input = input().split()
                 position = []
         """check if the input will be out of bounds"""
@@ -173,7 +173,7 @@ while play == 'y':
                 try: 
                     position.append(int(item))
                 except: 
-                    print("Please enter valid row and col numbers from 1 to 3")
+                    print("Please enter valid row and col numbers from 1 to 3:")
                     position_input = input().split()
                     position = []
         """check if the spot is full and validate new input"""
@@ -185,7 +185,7 @@ while play == 'y':
                 try: 
                     position.append(int(item))
                 except: 
-                    print("Please enter valid row and col numbers from 1 to 3")
+                    print("Please enter valid row and col numbers from 1 to 3:")
                     position_input = input().split()
                     position = []
         place_input(position[0] - 1, position[1] - 1)
