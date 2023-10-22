@@ -23,14 +23,14 @@ def check_win(board):
     X_win = False
     """across win"""
     for i in range(3):
+        count = 0
         for j in range(3):
-            count = 0
             if board[i][j] == 'O':
                 count += 1
             if count == 3:
                 O_win = True
+        count = 0
         for j in range(3):
-            count = 0
             if board[i][j] == 'X':
                 count += 1
             if count == 3:
@@ -85,13 +85,14 @@ def check_win(board):
             if i == j and board[i][j] == 'O':
                 count += 1
     if count == 3:
-        O_win == True
+        O_win = True
+    count = 0
     for i in range(3):
         for j in range(3):
             if i == j and board[i][j] == 'X':
                 count += 1
     if count == 3:
-        X_win == True
+        X_win = True
     """check diagonal 2"""
     count = 0
     for i in range(3):
@@ -99,14 +100,14 @@ def check_win(board):
             if j == 2 - i and board[i][j] == 'O':
                 count += 1
     if count == 3:
-        O_win == True
-        count = 0
+        O_win = True
+    count = 0
     for i in range(3):
         for j in range(3):
             if j == 2 - i and board[i][j] == 'X':
                 count += 1
     if count == 3:
-        X_win == True
+        X_win = True
     if X_win:
         return "Player X wins!"
     elif O_win:
