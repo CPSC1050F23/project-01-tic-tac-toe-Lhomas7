@@ -157,9 +157,9 @@ while play == 'y':
         position_input = input().split()
         position = []
         """validate that input is a numbered position"""
-        for item in position_input:
+        for i in range(len(position_input)*20):
             try: 
-                position.append(int(item))
+                position.append(int(position_input[i]))
             except: 
                 print("Please enter valid row and col numbers from 1 to 3:")
                 position_input = input().split()
@@ -169,9 +169,9 @@ while play == 'y':
             print("Please enter valid row and col numbers from 1 to 3:")
             position_input = input().split()
             position = []
-            for item in position_input:
+            for i in range(len(position_input*20)):
                 try: 
-                    position.append(int(item))
+                    position.append(int(position_input[i]))
                 except: 
                     print("Please enter valid row and col numbers from 1 to 3:")
                     position_input = input().split()
@@ -181,9 +181,9 @@ while play == 'y':
             print(f"That spot is full!\n\nEnter row and column for player {value}")
             position_input = input().split()
             position = []
-            for item in position_input:
+            for i in range(len(position_input)*20):
                 try:
-                    position.append(int(item))
+                    position.append(int(position_input[i]))
                 except: 
                     print("Please enter valid row and col numbers from 1 to 3:")
                     position_input = input().split()
