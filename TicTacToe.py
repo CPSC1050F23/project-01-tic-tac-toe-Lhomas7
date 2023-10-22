@@ -182,7 +182,7 @@ while play == 'y':
             position_input = input().split()
             position = []
             for item in position_input:
-                try: 
+                try:
                     position.append(int(item))
                 except: 
                     print("Please enter valid row and col numbers from 1 to 3:")
@@ -201,7 +201,7 @@ while play == 'y':
             break 
     """ask if user would like to play again"""      
     print("Do you want to play again? Y or N")
-    play = input().lower()
+    play = input().lower().strip()
     while play != 'y' and play != 'n':
         print('Please enter valid input: Y or N')
         print("Do you want to play again? Y or N")
