@@ -170,15 +170,15 @@ while play == 'y':
         """validate that input is a numbered position"""
         is_int = False
         while not is_int:
-            for item in position_input:
-                try: 
-                    position.append(int(item))
-                    is_int = True
-                except: 
-                    print("Please enter valid row and col numbers from 1 to 3:")
-                    position_input = input().split()
-                    position = []
-                    is_int = False   
+            try: 
+                position.append(int(position_input[0]))
+                position.append(int(position_input[1]))
+                is_int = True
+            except: 
+                print("Please enter valid row and col numbers from 1 to 3:")
+                position_input = input().split()
+                position = []
+                is_int = False   
         """check if the input will be out of bounds"""
         while check_out_of_bounds(position[0],position[1]):
             print("Please enter valid row and col numbers from 1 to 3:")
@@ -186,15 +186,15 @@ while play == 'y':
             position = []
             is_int = False
             while not is_int:
-                for item in position_input:
-                    try: 
-                        position.append(int(item))
-                        is_int = True
-                    except: 
-                        print("Please enter valid row and col numbers from 1 to 3:")
-                        position_input = input().split()
-                        position = []
-                        is_int = False
+                try: 
+                    position.append(int(position_input[0]))
+                    position.append(int(position_input[1]))
+                    is_int = True
+                except: 
+                    print("Please enter valid row and col numbers from 1 to 3:")
+                    position_input = input().split()
+                    position = []
+                    is_int = False
         """check if the spot is full and validate new input"""
         while not check_full(position[0] - 1,position[1] - 1):
             print(f"That spot is full!\n\nEnter row and column for player {value}")
@@ -202,15 +202,15 @@ while play == 'y':
             position = []
             is_int = False
             while not is_int:
-                for item in position_input:
-                    try:
-                        position.append(int(item))
-                        is_int = True
-                    except: 
-                        print("Please enter valid row and col numbers from 1 to 3:")
-                        position_input = input().split()
-                        position = []  
-                        is_int = False      
+                try:
+                    position.append(int(position_input[0]))
+                    position.append(int(position_input[1]))
+                    is_int = True
+                except: 
+                    print("Please enter valid row and col numbers from 1 to 3:")
+                    position_input = input().split()
+                    position = []  
+                    is_int = False      
         place_input(position[0] - 1, position[1] - 1)
         print(board_string(board))
         """check for a win or tie"""
